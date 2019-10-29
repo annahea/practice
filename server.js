@@ -7,9 +7,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //中间件调用
-// app.use(cookieParser());
+app.use(cookieParser());
 
-
+//中间件，静态资源调用
+app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.send("hello express");
 });
