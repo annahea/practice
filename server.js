@@ -1,6 +1,15 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
+//设置模版引擎
+app.set("views", "views");
+app.set("view engine", "ejs");
+//主页路由
+app.get('/', (req, res) => {
+    res.render('welcome.ejs', {
+        name: "张三",
+    }); //渲染哪个模版页面出去
+});
 
 const postRouter = require('./routes/post'); //调用post
 const studentRouter = require('./routes/student'); //调用student
