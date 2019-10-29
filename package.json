@@ -1,23 +1,24 @@
 {
-  "name": "20191029",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/annahea/practice.git"
-  },
-  "bugs": {
-    "url": "https://github.com/annahea/practice/issues"
-  },
-  "homepage": "https://github.com/annahea/practice#readme",
-  "description": "",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "20191029",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/annahea/practice.git"
+    },
+    "bugs": {
+        "url": "https://github.com/annahea/practice/issues"
+    },
+    "homepage": "https://github.com/annahea/practice#readme",
+    "description": "",
+    "dependencies": {
+        "cookie-parser": "^1.4.4",
+        "express": "^4.17.1"
+    }
 }
