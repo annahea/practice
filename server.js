@@ -11,6 +11,8 @@ app.use(cookieParser());
 
 //中间件，静态资源调用
 app.use(express.static('public'));
+//中间件，
+
 app.get('/', (req, res) => {
     res.send("hello express");
 });
@@ -44,6 +46,29 @@ app.get('/world/:name/:age', (req, res) => {
     console.log(req.get('accept'))
     res.send("hello world");
 });
+const myHello = type => {
+    return (req, res, next) => {
+        let abc = new Date();
+        let year = abc.getFullYear();
+        let month = abc.getMonth();
+        let date = abc.getDate();
+        if (type === 1) {
+            req.requestTime = `${year}-${month}-${date}`;
+        } else if (type === 2) {
+            req.requestTime = `${year}-${month}-${date}`;
+        } else if (type === 3) {
+            req.requestTime = `${year}`;
+        } else {
+            req.requestTime = abc.getTime();
+        };
+        next();
+    };
+};
+app.use(myHello(3));
 
+app.get('/test', (req, res) => {
+    console.log(req.requestTime);
+    res.send('test');
+});
 
 app.listen(3000);
