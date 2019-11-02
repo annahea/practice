@@ -3,7 +3,7 @@ const app = express();
 
 //中间件调用
 const cookieParser = require('cookie-parser');
-const userRouter = require('./routers/user');
+const userRouter = require('./routers/users');
 
 //模版引擎
 app.set('views', 'views');
