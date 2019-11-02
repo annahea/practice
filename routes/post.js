@@ -21,7 +21,8 @@ router.get('/', (req, res) => {
             content: "非常愉快",
             date: "2019-09-07",
             username: "张三"
-        }]
+        }],
+        isLogin: true
     });
 });
 router.post('/', (req, res) => {

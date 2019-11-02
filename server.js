@@ -8,19 +8,17 @@ app.set("view engine", "ejs");
 app.get('/', (req, res) => {
     res.render('welcome.ejs', {
         name: "张三",
+        isLogin: true
     }); //渲染哪个模版页面出去
 });
+
 
 const postRouter = require('./routes/post'); //调用post
 const studentRouter = require('./routes/student'); //调用student
 app.use('/posts', postRouter);
 app.use('/students', studentRouter);
 
-app.listen(3000);
-
-
-
-
+//调用数据库查询
 
 
 
@@ -94,4 +92,4 @@ app.listen(3000);
 //     res.send('test');
 // });
 
-// app.listen(3000);
+app.listen(3300);
